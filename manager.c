@@ -126,12 +126,14 @@ void searchProduct(Product *pp, int count ){
                 printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
 	            printf("*****************************************************\n");
                 for(int i=0;i<count;i++){
+			if(pp[i].gram!=-1){
                         if(pp[i].t_star>=search){
                                 printf("%2d\t",i+1);
                                 readProducts(pp[i]);
                                 c++;
                         }
                 }
+		}
                 if (c==0) printf("제품이 없습니다.\n");
         }
         else {
