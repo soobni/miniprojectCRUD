@@ -155,6 +155,8 @@ void searchProduct(Product *pp, int count ){
 
 int buyProduct(Product *pp,int index){
         int yn=0;
+	printf("제품no 상품명 중량 가격 표준가격 별점 판매개수\n");
+	printf("****************************************************\n");
         readProducts(pp[index-1]);
         printf("사시겠습니까? Y:1 N:0 ");
         scanf("%d",&yn);
