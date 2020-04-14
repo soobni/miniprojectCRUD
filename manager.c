@@ -151,3 +151,18 @@ void searchProduct(Product *pp, int count ){
 
         }
 }
+
+int buyProduct(Product *pp,int index){
+        int yn=0;
+        readProducts(pp[index-1]);
+        printf("사시겠습니까? Y:1 N:0 ");
+        scanf("%d",&yn);
+        if(yn==1){
+                pp[index-1].sell_c++;
+                printf("구매 완료 되었습니다\n");
+                printf("이 제품의 판매 개수 %d개",pp[index-1].sell_c);
+        }
+        else printf("취소되었습니다.\n");
+        return 0;
+
+}
