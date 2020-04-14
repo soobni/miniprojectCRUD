@@ -1,9 +1,9 @@
 #include "manager.h"
 int main(){
-	Product p[100];
+	Product p[1000];
 	int menu=-1;
-	int count=0;
-	int index=0;
+	int count=loadProduct(p);
+	int index=count;
 #ifdef DEBUG 
 printf("debug : while()\n");
 #endif
