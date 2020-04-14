@@ -65,6 +65,8 @@ void searchProduct(Product *pp, int count ){
                 getchar();
                 scanf("%[^\n]",name);
                 getchar();
+                printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
+	            printf("*****************************************************\n");
                 for(int i=0;i<count;i++){
                         if(pp[i].price!=-1){
                                 if(strstr(pp[i].name,name)){
@@ -84,6 +86,8 @@ void searchProduct(Product *pp, int count ){
                 if(ud==1){
                         printf("얼마 이상의 상품의 가격을 검색하시겠습니까? ");
                         scanf("%d",&search);
+                        printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
+	                    printf("*****************************************************\n");
                         for(int i=0;i<count;i++){
                         if(pp[i].price!=-1){
                                 if(pp[i].price>=search){
@@ -98,6 +102,8 @@ void searchProduct(Product *pp, int count ){
                 else{
                         printf("얼마 이하의 상품의 가격을 검색하시겠습니까? ");
                         scanf("%d",&search);
+                        printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
+	                    printf("*****************************************************\n");
                         for(int i=0;i<count;i++){
                         if(pp[i].price!=-1){
                                 if(pp[i].price<=search){
@@ -116,6 +122,8 @@ void searchProduct(Product *pp, int count ){
                 int search=0;
                 printf("별점 몇점 이상의 상품을 원하냐요? ");
                 scanf("%d",&search);
+                printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
+	            printf("*****************************************************\n");
                 for(int i=0;i<count;i++){
                         if(pp[i].t_star>=search){
                                 printf("%2d\t",i+1);
@@ -130,6 +138,8 @@ void searchProduct(Product *pp, int count ){
                 int search=0;
                 printf("얼마 이상 팔린 제품을 원하시냐요? ");
                 scanf("%d",&search);
+                printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
+	            printf("*****************************************************\n");
                 for(int i=0;i<count;i++){
                         if(pp[i].sell_c>=search){
                                 printf("%2d\t",i+1);
@@ -141,4 +151,3 @@ void searchProduct(Product *pp, int count ){
 
         }
 }
-
