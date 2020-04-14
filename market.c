@@ -68,6 +68,38 @@ printf("debug :deleteProduct()\n");
 		}
 
 	}
+
+	if(menu==5){
+		if(count==0)
+			printf("데이터가 없습니다.\n");
+		else 
+			saveProduct(p,index);
+	}
+
+	if(menu==6){
+		if(count==0)
+			printf("데이터가 없습니다.\n");
+		else {
+			searchProduct(p,count);
+			
+		}
+			
+	}
+	if(menu==7){
+		if(count==0)
+			printf("데이터가 없습니다.\n");
+		else{
+			listProduct(p,count);
+			int buy=0;
+			printf("살 상품은? ");
+			scanf("%d",&buy);
+			buyProduct(p,buy);
+		}
+		
+	}
+
+
+
 }	
 return 0;
 }
