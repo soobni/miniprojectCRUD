@@ -86,7 +86,7 @@ printf("debug :searchProduct()");
 		if(count==0)
 			printf("데이터가 없습니다.\n");
 		else {
-			searchProduct(p,count);
+			searchProduct(p,index);
 			
 		}
 			
@@ -98,7 +98,7 @@ printf("debug :buy Product ()");
 		if(count==0)
 			printf("데이터가 없습니다.\n");
 		else{
-			listProduct(p,count);
+			listProduct(p,index);
 			int buy=0;
 			printf("살 상품은? ");
 			scanf("%d",&buy);
