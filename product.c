@@ -1,5 +1,17 @@
 #include "product.h"
 
+
+int selectMenu(){
+
+	int m =0;
+	printf("\n1.메뉴조회\n2.메뉴추가\n3.메뉴수정\n4.메뉴삭제\n5.저장\n6.검색\n7.제품사기\n0.종료\n");
+	printf("\n원하는 메뉴는? ");
+	scanf("%d",&m);
+
+	return m;
+
+}
+
 void readProduct(Product p){
 
     if(p.price==-1)printf("읽을 상품이 없습니다.\n");

@@ -1,14 +1,4 @@
 #include "manager.h"
-int selectMenu(){
-
-	int m =0;
-	printf("\n1.메뉴조회\n2.메뉴추가\n3.메뉴수정\n4.메뉴삭제\n0.종료\n");
-	printf("\n원하는 메뉴는? ");
-	scanf("%d",&m);
-
-	return m;
-
-}
 int main(){
 	Product p[100];
 	int menu=-1;
