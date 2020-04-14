@@ -72,7 +72,7 @@ void searchProduct(Product *pp, int count ){
                         if(pp[i].price!=-1){
                                 if(strstr(pp[i].name,name)){
                                         printf("%2d\t",i+1);
-                                        readProduct(pp[i]);
+                                        readProducts(pp[i]);
                                         c++;
                                 }
                         }
@@ -142,12 +142,14 @@ void searchProduct(Product *pp, int count ){
                 printf("제품no 상품명 중량 가격 표준가격 별점   판매개수\n");
 	            printf("*****************************************************\n");
                 for(int i=0;i<count;i++){
-                        if(pp[i].sell_c>=search){
-                                printf("%2d\t",i+1);
-                                readProducts(pp[i]);
-                                c++;
-                        }
-                }
+			if(pp[i].price!=-1){
+                        	if(pp[i].sell_c>=search){
+                               		printf("%2d\t",i+1);
+                                	readProducts(pp[i]);
+                                	c++;
+                        	}
+                	}
+		}		
                 if (c==0) printf("제품이 없습니다.\n");
 
         }
@@ -155,8 +157,8 @@ void searchProduct(Product *pp, int count ){
 
 int buyProduct(Product *pp,int index){
         int yn=0;
-	printf("제품no 상품명 중량 가격 표준가격 별점 판매개수\n");
-	printf("****************************************************\n");
+	printf("상품명 중량 가격 표준가격 별점 판매개수\n");
+	printf("**********************************************\n");
         readProducts(pp[index-1]);
         printf("사시겠습니까? Y:1 N:0 ");
         scanf("%d",&yn);
