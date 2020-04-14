@@ -69,6 +69,9 @@ printf("debug :deleteProduct()\n");
 
 	}
 
+#ifdef DEBUG
+printf("debug :saveProduct()");
+#endif	
 	if(menu==5){
 		if(count==0)
 			printf("데이터가 없습니다.\n");
@@ -76,6 +79,9 @@ printf("debug :deleteProduct()\n");
 			saveProduct(p,index);
 	}
 
+#ifdef DEBUG
+printf("debug :searchProduct()");
+#endif	
 	if(menu==6){
 		if(count==0)
 			printf("데이터가 없습니다.\n");
@@ -85,6 +91,9 @@ printf("debug :deleteProduct()\n");
 		}
 			
 	}
+#ifdef DEBUG
+printf("debug :buy Product ()");
+#endif	
 	if(menu==7){
 		if(count==0)
 			printf("데이터가 없습니다.\n");
