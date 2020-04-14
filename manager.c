@@ -1,4 +1,5 @@
 #include "manager.h"
+#include "string.h"
 
 void readProducts(Product p){
 printf("%s %.0f %d %.1f %d %d\n",p.name,p.gram,p.price,p.stand_price,p.t_star,p.sell_c);
