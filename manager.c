@@ -31,3 +31,22 @@ void saveProduct(Product p[],int count){
         }
         printf("-> 저장됨!\n");
 }
+
+
+int loadProduct(Product *p){
+	int n=0;
+    FILE * fp;
+    fp = fopen("product.txt","rt");
+    if(fp == NULL){
+        printf("=> 파일 없음\n");
+        return 0;
+    }
+    for(; ; n++){
+		if(feof(fp))break;
+        fscanf(fp,"%s %f %d %f %d %d\n",p[n].name,&p[n].gram,&p[n].price,&p[n].stand_price,&p[n].t_star,&p[n].sell_c);
+        
+    }
+    fclose(fp);
+    printf("=> 로딩 성공!\n");
+    return n;
+}
